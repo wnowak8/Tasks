@@ -29,10 +29,7 @@ def calculate_damage(first_pokemon: str,second_pokemon: str):
     response = r.json()
     for key in response['damage_relations']:
         if key.endswith("to"):
-            # print(key)
-            # print("---------------------------")
             damage_names=[_['name'] for _ in response['damage_relations'][key]]
-            # print(damage_names)
             if type_1_of_second_pokemon and type_1_of_second_pokemon in damage_names:
                 damage_1=get_damage(key)
             if type_2_of_second_pokemon and type_2_of_second_pokemon in damage_names:
