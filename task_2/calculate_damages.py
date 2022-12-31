@@ -2,6 +2,13 @@ import requests
 
 
 def get_damage(key: str):
+    """Get information about damage.
+    Args:
+        key (str): Name of json's key.
+    Returns:
+        Number of damage multiplier.
+    """
+
     if key.startswith("double"):
         return 2
     elif key.startswith("half"):
@@ -13,6 +20,15 @@ def get_damage(key: str):
 
 
 def calculate_damage(first_pokemon: str,second_pokemon: str):
+    """Get information about pokemon and calculate damages.
+    Args:
+        first_pokemon (str): Type of first pokemon.
+        second_pokemon (str): Type of second pokemon.
+
+    Returns:
+        Number of damage.
+    """
+
     type_1_of_second_pokemon=type_2_of_second_pokemon=None
     damage_1=damage_2=1
 
