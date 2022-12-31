@@ -26,7 +26,7 @@ def calculate_damage(first_pokemon: str,second_pokemon: str):
         second_pokemon (str): Type of second pokemon.
 
     Returns:
-        Number of damage.
+        (str): Number of damage.
     """
 
     type_1_of_second_pokemon=type_2_of_second_pokemon=None
