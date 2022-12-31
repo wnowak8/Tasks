@@ -6,7 +6,7 @@ def get_damage(key: str):
     Args:
         key (str): Name of json's key.
     Returns:
-        Number of damage multiplier.
+        Number of damage multiplier for one type.
     """
 
     if key.startswith("double"):
@@ -26,7 +26,7 @@ def calculate_damage(first_pokemon: str,second_pokemon: str):
         second_pokemon (str): Type of second pokemon.
 
     Returns:
-        (str): Number of damage.
+        (str): Number of damage multiplier.
     """
 
     type_1_of_second_pokemon=type_2_of_second_pokemon=None
@@ -52,4 +52,3 @@ def calculate_damage(first_pokemon: str,second_pokemon: str):
                 damage_2=get_damage(key)
   
     return str(damage_1 * damage_2)+'x'
-
